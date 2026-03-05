@@ -344,6 +344,8 @@
       color: #e2e8f0;
       margin: 14px 0;
       box-shadow: var(--shadow);
+      white-space: pre;
+      overflow-x: auto;
     }
     .ft-dir { color: #93c5fd; font-weight: 600; }
     .ft-file { color: #c9d1d9; }
@@ -467,7 +469,7 @@
     <div class="nav-divider"></div>
     <div class="sidebar-label" style="margin-top:4px;">セットアップ手順</div>
 
-    <a class="nav-item" href="#sec-github">4.0. GitHubの準備</a>
+    <a class="nav-item" href="#sec-github">GitHubの準備</a>
     <a class="nav-sub" href="#github-account">アカウント作成</a>
     <a class="nav-sub" href="#github-git">Gitインストール</a>
     <a class="nav-sub" href="#github-repo">リポジトリ作成</a>
@@ -690,21 +692,21 @@ code .</code></pre>
            セットアップ手順
       ============================================================ -->
 
-      <!-- ── 4.0 GitHubの準備 ── -->
+      <!-- ── GitHubの準備 ── -->
       <section class="section fade-in" id="sec-github">
         <div class="section-header">
-          <div class="section-num">4.0</div>
+          <div class="section-num">準</div>
           <h2 class="section-title">GitHubの準備</h2>
         </div>
 
-        <h3 id="github-account">1. GitHubアカウントの作成</h3>
+        <h3 id="github-account">GitHubアカウントの作成</h3>
         <ol class="steps">
           <li><div class="step-num">1</div><div class="step-body"><a href="https://github.com/" target="_blank">GitHub公式サイト</a>にアクセスし、<strong>「Sign up」</strong>をクリックします。</div></li>
           <li><div class="step-num">2</div><div class="step-body">メールアドレス、パスワード、ユーザー名を入力して登録を完了させます。</div></li>
           <li><div class="step-num">3</div><div class="step-body">登録したメールアドレスに届く認証コードを入力して、アカウントを有効化してください。</div></li>
         </ol>
 
-        <h3 id="github-git">2. Gitのインストールと初期設定</h3>
+        <h3 id="github-git">Gitのインストールと初期設定</h3>
         <ol class="steps">
           <li>
             <div class="step-num">1</div>
@@ -727,7 +729,7 @@ code .</code></pre>
           </li>
         </ol>
 
-        <h3 id="github-repo">3. プロジェクト用リポジトリの作成</h3>
+        <h3 id="github-repo">プロジェクト用リポジトリの作成</h3>
         <ol class="steps">
           <li><div class="step-num">1</div><div class="step-body">GitHubのトップ画面左側、または右上の「＋」アイコンから <strong>「New repository」</strong> をクリックします。</div></li>
           <li><div class="step-num">2</div><div class="step-body"><strong>Repository name</strong>：プロジェクト名を入力（例：<code>my-roblox-game</code>）。</div></li>
@@ -747,7 +749,7 @@ code .</code></pre>
           <li><div class="step-num">6</div><div class="step-body">作成したリポジトリの緑色の <strong>「&lt;&gt; Code」</strong> ボタンをクリックし、「HTTPS」タブのURL（<code>https://github.com/&lt;ユーザー名&gt;/&lt;project-name&gt;.git</code>）をコピーします。このURLを次のクローン手順で使用します。</div></li>
         </ol>
 
-        <h3 id="github-auth">4. 認証の設定（重要）</h3>
+        <h3 id="github-auth">認証の設定（重要）</h3>
         <div class="warn">
           <span class="callout-icon">⚠️</span>
           <div class="callout-body">最近のGitHubはパスワードだけで <code>git push</code> ができません。以下のいずれかの設定が必要です。</div>
@@ -768,7 +770,7 @@ code .</code></pre>
       <!-- ── クローン ── -->
       <section class="section fade-in" id="sec-clone">
         <div class="section-header">
-          <div class="section-num">4.1</div>
+          <div class="section-num">ク</div>
           <h2 class="section-title">リポジトリのクローン</h2>
         </div>
         <p>実行環境：PowerShell</p>
@@ -785,7 +787,7 @@ code .</code></pre>
       <!-- ── Rojo インストール ── -->
       <section class="section fade-in" id="sec-rojo">
         <div class="section-header">
-          <div class="section-num">4.2</div>
+          <div class="section-num">ｲﾝ</div>
           <h2 class="section-title">Rojoのインストール</h2>
         </div>
         <p>実行環境：PowerShell</p>
@@ -833,7 +835,7 @@ code .</code></pre>
       <!-- ── VSCode セットアップ ── -->
       <section class="section fade-in" id="sec-vscode">
         <div class="section-header">
-          <div class="section-num">4.3</div>
+          <div class="section-num">V</div>
           <h2 class="section-title">VSCodeのセットアップ</h2>
         </div>
 
@@ -875,7 +877,7 @@ code .</code></pre>
       <!-- ── Studio 接続 ── -->
       <section class="section fade-in" id="sec-studio">
         <div class="section-header">
-          <div class="section-num">4.4</div>
+          <div class="section-num">接</div>
           <h2 class="section-title">Roblox StudioでRojoプラグインに接続</h2>
         </div>
 
@@ -920,7 +922,7 @@ code .</code></pre>
       <!-- ── TestEZ ── -->
       <section class="section fade-in" id="sec-testez">
         <div class="section-header">
-          <div class="section-num">4.5</div>
+          <div class="section-num">EZ</div>
           <h2 class="section-title">TestEZの構築</h2>
         </div>
         <p>Wally を使って TestEZ を導入します。</p>
@@ -1070,7 +1072,7 @@ print(results)</code></pre>
         <p>「プレイ（F5）」を押すだけでテストが走るよう、TestRunner を設定します。</p>
         <ol class="steps">
           <li>
-            <div class="step-num">①</div>
+            <div class="step-num">1</div>
             <div class="step-body">
               <strong><code>src/runner/</code> フォルダを作成する</strong>
               <div class="filetree" style="margin-top:10px;">
@@ -1081,7 +1083,7 @@ print(results)</code></pre>
             </div>
           </li>
           <li>
-            <div class="step-num">②</div>
+            <div class="step-num">2</div>
             <div class="step-body">
               <strong><code>src/runner/TestRunner.server.lua</code> を作成</strong>
               <div class="code-block" style="margin-top:10px;">
@@ -1095,7 +1097,7 @@ print(<span class="st">"===== TestEZ Finished ====="</span>)</code></pre>
             </div>
           </li>
           <li>
-            <div class="step-num">③</div>
+            <div class="step-num">3</div>
             <div class="step-body">
               <strong>Rojo の <code>default.project.json</code> に runner を追加する</strong>
               <div class="code-block" style="margin-top:10px;">
@@ -1125,7 +1127,7 @@ print(<span class="st">"===== TestEZ Finished ====="</span>)</code></pre>
             </div>
           </li>
           <li>
-            <div class="step-num">④</div>
+            <div class="step-num">4</div>
             <div class="step-body">
               <strong>Studio で TestEZ 実行を確認</strong>
               「プレイ（F5）」を押すと「出力」にテスト実行結果が表示されます。
@@ -1138,7 +1140,7 @@ print(<span class="st">"===== TestEZ Finished ====="</span>)</code></pre>
       <!-- ── GitHub Actions CI ── -->
       <section class="section fade-in" id="sec-ci">
         <div class="section-header">
-          <div class="section-num">4.6</div>
+          <div class="section-num">自</div>
           <h2 class="section-title">GitHub Actions の自動テスト（CI）を設定</h2>
         </div>
 
@@ -1228,7 +1230,7 @@ rojo  = { source = <span class="st">"rojo-rbx/rojo"</span>,       version = <spa
       <!-- ── .gitignore ── -->
       <section class="section fade-in" id="gitignore">
         <div class="section-header">
-          <div class="section-num alt">除</div>
+          <div class="section-num alt">絶</div>
           <h2 class="section-title">.gitignore について</h2>
         </div>
         <div class="warn">
