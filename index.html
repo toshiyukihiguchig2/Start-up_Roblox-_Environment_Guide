@@ -22,7 +22,7 @@
       --gray-500: #6b7280;
       --gray-700: #374151;
       --gray-900: #111827;
-      --sidebar-w: 260px;
+      --sidebar-w: 270px;
       --radius: 12px;
       --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
       --shadow: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.05);
@@ -54,12 +54,7 @@
       z-index: 100;
       gap: 16px;
     }
-    .topnav-logo {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--primary);
-      white-space: nowrap;
-    }
+    .topnav-logo { font-size: 1rem; font-weight: 700; color: var(--primary); white-space: nowrap; }
     .topnav-logo span { color: var(--accent); }
     .topnav-spacer { flex: 1; }
     .topnav-badge {
@@ -78,14 +73,9 @@
       padding: 6px;
       color: var(--gray-700);
     }
-    .menu-toggle svg { display: block; }
 
     /* ── LAYOUT ── */
-    .layout {
-      display: flex;
-      margin-top: 60px;
-      flex: 1;
-    }
+    .layout { display: flex; margin-top: 60px; flex: 1; }
 
     /* ── SIDEBAR ── */
     aside {
@@ -94,11 +84,9 @@
       background: #fff;
       border-right: 1px solid var(--gray-200);
       position: fixed;
-      top: 60px;
-      left: 0;
-      bottom: 0;
+      top: 60px; left: 0; bottom: 0;
       overflow-y: auto;
-      padding: 28px 0 40px;
+      padding: 20px 0 40px;
       transition: transform .3s ease;
       z-index: 90;
     }
@@ -108,48 +96,34 @@
       letter-spacing: .08em;
       color: var(--gray-500);
       text-transform: uppercase;
-      padding: 0 20px 10px;
+      padding: 0 16px 8px;
     }
     .nav-item {
       display: block;
-      padding: 9px 20px;
+      padding: 8px 16px;
       color: var(--gray-700);
       text-decoration: none;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       border-left: 3px solid transparent;
       transition: all .2s;
-      position: relative;
     }
-    .nav-item:hover {
-      background: var(--primary-light);
-      color: var(--primary);
-      border-left-color: var(--primary);
-    }
-    .nav-item.active {
-      background: var(--primary-light);
-      color: var(--primary);
-      border-left-color: var(--primary);
-      font-weight: 600;
-    }
+    .nav-item:hover { background: var(--primary-light); color: var(--primary); border-left-color: var(--primary); }
+    .nav-item.active { background: var(--primary-light); color: var(--primary); border-left-color: var(--primary); font-weight: 600; }
     .nav-sub {
       display: block;
-      padding: 6px 20px 6px 34px;
+      padding: 5px 16px 5px 28px;
       color: var(--gray-500);
       text-decoration: none;
-      font-size: 0.82rem;
+      font-size: 0.79rem;
       border-left: 3px solid transparent;
       transition: all .2s;
     }
     .nav-sub:hover { color: var(--primary); background: var(--gray-50); }
     .nav-sub.active { color: var(--primary); font-weight: 500; }
-    .nav-divider { height: 1px; background: var(--gray-100); margin: 12px 16px; }
+    .nav-divider { height: 1px; background: var(--gray-100); margin: 10px 12px; }
 
     /* ── MAIN ── */
-    main {
-      margin-left: var(--sidebar-w);
-      flex: 1;
-      min-width: 0;
-    }
+    main { margin-left: var(--sidebar-w); flex: 1; min-width: 0; }
 
     /* ── HERO ── */
     .hero {
@@ -165,7 +139,7 @@
       inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    .hero-inner { position: relative; max-width: 720px; }
+    .hero-inner { position: relative; max-width: 760px; }
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
@@ -181,57 +155,27 @@
       margin-bottom: 20px;
       backdrop-filter: blur(8px);
     }
-    .hero-dot {
-      width: 8px; height: 8px;
-      background: #4ade80;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%,100% { opacity: 1; transform: scale(1); }
-      50% { opacity: .6; transform: scale(1.3); }
-    }
-    .hero h1 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      letter-spacing: -.02em;
-    }
+    .hero-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.6; transform:scale(1.3); } }
+    .hero h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin-bottom: 16px; letter-spacing: -.02em; }
     .hero h1 span { color: #93c5fd; }
-    .hero-sub {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,.8);
-      font-style: italic;
-      margin-bottom: 32px;
-    }
-    .hero-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .hero-sub { font-size: 1rem; color: rgba(255,255,255,.8); font-style: italic; margin-bottom: 28px; }
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 10px; }
     .hero-chip {
       background: rgba(255,255,255,.12);
       border: 1px solid rgba(255,255,255,.2);
       border-radius: 8px;
       padding: 6px 16px;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 600;
       backdrop-filter: blur(8px);
       transition: all .2s;
     }
-    .hero-chip:hover {
-      background: rgba(255,255,255,.22);
-      transform: translateY(-1px);
-    }
-    .hero-updated {
-      margin-top: 28px;
-      font-size: 0.78rem;
-      color: rgba(255,255,255,.5);
-    }
+    .hero-chip:hover { background: rgba(255,255,255,.22); transform: translateY(-1px); }
+    .hero-updated { margin-top: 28px; font-size: 0.78rem; color: rgba(255,255,255,.5); }
 
     /* ── CONTENT ── */
-    .content { padding: 48px 48px 80px; max-width: 860px; }
+    .content { padding: 48px 48px 80px; max-width: 880px; }
 
     /* ── SECTION ── */
     .section { margin-bottom: 64px; }
@@ -239,7 +183,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       padding-bottom: 16px;
       border-bottom: 2px solid var(--gray-100);
     }
@@ -255,11 +199,8 @@
       font-weight: 700;
       flex-shrink: 0;
     }
-    .section-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--gray-900);
-    }
+    .section-num.alt { background: linear-gradient(135deg, var(--accent), #ec4899); }
+    .section-title { font-size: 1.3rem; font-weight: 700; color: var(--gray-900); }
     h3 {
       font-size: 1rem;
       font-weight: 700;
@@ -269,32 +210,22 @@
       align-items: center;
       gap: 8px;
     }
-    h3::before {
-      content: '';
-      width: 4px; height: 18px;
-      background: var(--primary);
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-    p { margin-bottom: 14px; color: var(--gray-700); }
-    ul, ol { margin: 8px 0 16px 22px; }
-    li { margin-bottom: 8px; }
+    h3::before { content: ''; width: 4px; height: 18px; background: var(--primary); border-radius: 2px; flex-shrink: 0; }
+    h4 { font-size: 0.92rem; font-weight: 700; color: var(--gray-700); margin: 20px 0 10px; }
+    p { margin-bottom: 12px; color: var(--gray-700); }
+    ul, ol { margin: 8px 0 14px 22px; }
+    li { margin-bottom: 6px; }
     a { color: var(--primary); text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
     strong { color: var(--gray-900); }
 
     /* ── CARDS ── */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 20px 0 28px;
-    }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin: 18px 0 24px; }
     .card {
       background: #fff;
       border: 1px solid var(--gray-200);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 18px;
       box-shadow: var(--shadow-sm);
       transition: all .25s ease;
       position: relative;
@@ -310,36 +241,14 @@
       transform-origin: left;
       transition: transform .3s ease;
     }
-    .card:hover {
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-3px);
-      border-color: transparent;
-    }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: transparent; }
     .card:hover::after { transform: scaleX(1); }
-    .card-icon {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-    }
-    .card-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: 4px;
-    }
-    .card-desc {
-      font-size: 0.8rem;
-      color: var(--gray-500);
-      line-height: 1.5;
-    }
+    .card-icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .card-name { font-size: 0.92rem; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
+    .card-desc { font-size: 0.78rem; color: var(--gray-500); line-height: 1.5; }
 
     /* ── CODE ── */
-    .code-block {
-      background: #1e293b;
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin: 16px 0;
-      box-shadow: var(--shadow);
-    }
+    .code-block { background: #1e293b; border-radius: var(--radius); overflow: hidden; margin: 14px 0; box-shadow: var(--shadow); }
     .code-header {
       display: flex;
       align-items: center;
@@ -349,320 +258,187 @@
       border-bottom: 1px solid #334155;
     }
     .code-dots { display: flex; gap: 6px; }
-    .code-dots span {
-      width: 10px; height: 10px;
-      border-radius: 50%;
-    }
-    .d1 { background: #ef4444; }
-    .d2 { background: #f59e0b; }
-    .d3 { background: #22c55e; }
-    .code-lang {
-      font-size: 0.72rem;
-      color: #64748b;
-      font-family: monospace;
-      letter-spacing: .05em;
-    }
+    .code-dots span { width: 10px; height: 10px; border-radius: 50%; }
+    .d1 { background: #ef4444; } .d2 { background: #f59e0b; } .d3 { background: #22c55e; }
+    .code-lang { font-size: 0.72rem; color: #64748b; font-family: monospace; letter-spacing: .05em; }
     .copy-btn {
-      background: #334155;
-      border: none;
-      border-radius: 6px;
-      color: #94a3b8;
-      font-size: 0.72rem;
-      padding: 4px 10px;
-      cursor: pointer;
-      transition: all .2s;
-      font-family: inherit;
+      background: #334155; border: none; border-radius: 6px;
+      color: #94a3b8; font-size: 0.72rem; padding: 4px 10px;
+      cursor: pointer; transition: all .2s; font-family: inherit;
     }
     .copy-btn:hover { background: #475569; color: #fff; }
     .copy-btn.copied { background: #059669; color: #fff; }
-    pre {
-      margin: 0;
-      padding: 20px;
-      overflow-x: auto;
-      font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace;
-      font-size: 0.85rem;
-      line-height: 1.65;
-      color: #e2e8f0;
-    }
+    pre { margin: 0; padding: 20px; overflow-x: auto; font-family: 'Cascadia Code','Consolas','Courier New',monospace; font-size: 0.84rem; line-height: 1.65; color: #e2e8f0; }
     code {
       background: var(--primary-light);
       color: var(--primary-dark);
       padding: 2px 6px;
       border-radius: 5px;
-      font-family: 'Cascadia Code', 'Consolas', monospace;
-      font-size: 0.85em;
+      font-family: 'Cascadia Code','Consolas',monospace;
+      font-size: 0.84em;
       font-weight: 500;
     }
-    pre code {
-      background: none;
-      color: inherit;
-      padding: 0;
-      font-size: inherit;
-      font-weight: normal;
-    }
-
-    /* syntax highlights */
-    .kw { color: #93c5fd; }
-    .st { color: #86efac; }
-    .cm { color: #64748b; font-style: italic; }
-    .nm { color: #fbbf24; }
+    pre code { background: none; color: inherit; padding: 0; font-size: inherit; font-weight: normal; }
+    .kw { color: #93c5fd; } .st { color: #86efac; } .cm { color: #64748b; font-style: italic; } .nm { color: #fbbf24; } .ky { color: #f472b6; }
 
     /* ── CALLOUTS ── */
     .tip, .warn, .info {
       border-radius: var(--radius);
-      padding: 16px 20px;
-      margin: 16px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
       display: flex;
-      gap: 14px;
+      gap: 12px;
       align-items: flex-start;
     }
     .tip { background: var(--success-light); border: 1px solid #6ee7b7; }
     .warn { background: var(--warning-light); border: 1px solid #fcd34d; }
     .info { background: var(--primary-light); border: 1px solid #93c5fd; }
-    .callout-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .callout-icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
     .tip .callout-body { color: #065f46; }
     .warn .callout-body { color: #92400e; }
     .info .callout-body { color: #1e40af; }
-    .callout-body { font-size: 0.9rem; }
+    .callout-body { font-size: 0.88rem; line-height: 1.65; }
+    .callout-body strong { color: inherit; }
 
     /* ── STEPS ── */
     .steps { list-style: none; margin: 0; padding: 0; }
-    .steps li {
-      display: flex;
-      gap: 16px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--gray-100);
-    }
-    .steps li:last-child { border-bottom: none; }
+    .steps > li { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--gray-100); }
+    .steps > li:last-child { border-bottom: none; }
     .step-num {
-      width: 28px; height: 28px;
+      width: 26px; height: 26px;
       background: var(--primary);
       color: #fff;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.78rem;
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 2px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.76rem; font-weight: 700; flex-shrink: 0; margin-top: 2px;
     }
     .step-body { flex: 1; font-size: 0.9rem; }
-    .step-body strong { display: block; margin-bottom: 4px; color: var(--gray-900); }
+    .step-body strong { display: block; margin-bottom: 4px; color: var(--gray-900); font-size: 0.92rem; }
 
-    /* ── FLOW DIAGRAM ── */
+    /* ── FLOW ── */
     .flow {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0;
-      background: #fff;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin: 20px 0;
+      display: flex; align-items: center; flex-wrap: wrap; gap: 0;
+      background: #fff; border: 1px solid var(--gray-200);
+      border-radius: var(--radius); padding: 20px; margin: 18px 0;
       box-shadow: var(--shadow-sm);
     }
-    .flow-step {
-      flex: 1;
-      min-width: 100px;
-      text-align: center;
-      padding: 12px;
-    }
+    .flow-step { flex: 1; min-width: 90px; text-align: center; padding: 10px; }
     .flow-step-icon {
-      width: 48px; height: 48px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin: 0 auto 8px;
+      width: 46px; height: 46px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin: 0 auto 8px;
     }
-    .f-blue { background: var(--primary-light); }
-    .f-purple { background: var(--accent-light); }
-    .f-green { background: var(--success-light); }
-    .flow-step-name { font-size: 0.82rem; font-weight: 700; color: var(--gray-900); }
-    .flow-step-sub { font-size: 0.72rem; color: var(--gray-500); margin-top: 2px; }
-    .flow-arrow {
-      color: var(--gray-300);
-      font-size: 1.4rem;
-      flex-shrink: 0;
+    .f-blue { background: var(--primary-light); } .f-purple { background: var(--accent-light); } .f-green { background: var(--success-light); } .f-orange { background: #fff7ed; }
+    .flow-step-name { font-size: 0.78rem; font-weight: 700; color: var(--gray-900); }
+    .flow-step-sub { font-size: 0.7rem; color: var(--gray-500); margin-top: 2px; }
+    .flow-arrow { color: var(--gray-300); font-size: 1.3rem; flex-shrink: 0; }
+
+    /* ── FILE TREE ── */
+    .filetree {
+      background: #1e293b;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      font-family: 'Cascadia Code','Consolas',monospace;
+      font-size: 0.84rem;
+      line-height: 1.8;
+      color: #e2e8f0;
+      margin: 14px 0;
+      box-shadow: var(--shadow);
     }
+    .ft-dir { color: #93c5fd; font-weight: 600; }
+    .ft-file { color: #c9d1d9; }
+    .ft-comment { color: #64748b; font-style: italic; }
 
     /* ── TABLE ── */
-    .table-wrap {
-      background: #fff;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      margin: 16px 0;
-    }
+    .table-wrap { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); margin: 14px 0; }
     table { width: 100%; border-collapse: collapse; }
-    th {
-      background: var(--gray-50);
-      padding: 12px 16px;
-      text-align: left;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--gray-500);
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    td {
-      padding: 13px 16px;
-      font-size: 0.9rem;
-      border-bottom: 1px solid var(--gray-100);
-      vertical-align: middle;
-    }
+    th { background: var(--gray-50); padding: 11px 14px; text-align: left; font-size: 0.8rem; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid var(--gray-200); }
+    td { padding: 11px 14px; font-size: 0.88rem; border-bottom: 1px solid var(--gray-100); vertical-align: middle; }
     tr:last-child td { border-bottom: none; }
     tbody tr { transition: background .15s; }
     tbody tr:hover td { background: var(--primary-light); }
 
-    /* ── DIVIDER ── */
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(90deg, var(--gray-200), transparent);
-      margin: 0 0 64px;
-    }
-
-    /* ── PROGRESS BAR ANIMATION ── */
-    .progress-container {
+    /* ── DETAILS (collapsible) ── */
+    details {
       background: #fff;
       border: 1px solid var(--gray-200);
       border-radius: var(--radius);
-      padding: 24px;
-      margin: 20px 0;
-      box-shadow: var(--shadow-sm);
-    }
-    .progress-item { margin-bottom: 18px; }
-    .progress-item:last-child { margin-bottom: 0; }
-    .progress-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--gray-700);
-      margin-bottom: 6px;
-    }
-    .progress-bar {
-      height: 8px;
-      background: var(--gray-100);
-      border-radius: 4px;
+      margin: 14px 0;
       overflow: hidden;
     }
-    .progress-fill {
-      height: 100%;
-      border-radius: 4px;
-      width: 0%;
-      transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    summary {
+      padding: 14px 18px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+      list-style: none;
     }
-    .pf-blue { background: linear-gradient(90deg, var(--primary), #60a5fa); }
-    .pf-purple { background: linear-gradient(90deg, var(--accent), #a78bfa); }
-    .pf-green { background: linear-gradient(90deg, var(--success), #34d399); }
+    summary::-webkit-details-marker { display: none; }
+    summary::before { content: '▶'; font-size: 0.7rem; color: var(--gray-400); transition: transform .2s; }
+    details[open] summary::before { transform: rotate(90deg); }
+    summary:hover { background: var(--gray-50); }
+    .details-body { padding: 0 18px 18px; border-top: 1px solid var(--gray-100); }
+
+    /* ── DIVIDER ── */
+    .section-divider { height: 1px; background: linear-gradient(90deg, var(--gray-200), transparent); margin: 0 0 56px; }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--gray-900);
-      color: var(--gray-500);
-      text-align: center;
-      padding: 28px 24px;
-      font-size: 0.82rem;
-      margin-left: var(--sidebar-w);
-    }
+    footer { background: var(--gray-900); color: var(--gray-500); text-align: center; padding: 28px 24px; font-size: 0.82rem; margin-left: var(--sidebar-w); }
     footer a { color: #60a5fa; }
 
     /* ── SCROLL PROGRESS ── */
-    #scroll-progress {
-      position: fixed;
-      top: 60px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      transform-origin: left;
-      transform: scaleX(0);
-      z-index: 200;
-      transition: transform .1s linear;
-    }
+    #scroll-progress { position: fixed; top: 60px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); transform-origin: left; transform: scaleX(0); z-index: 200; transition: transform .1s linear; }
 
     /* ── BACK TO TOP ── */
     #back-top {
-      position: fixed;
-      bottom: 32px;
-      right: 32px;
+      position: fixed; bottom: 32px; right: 32px;
       width: 44px; height: 44px;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      font-size: 1.1rem;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-      opacity: 0;
-      pointer-events: none;
+      background: var(--primary); color: #fff;
+      border: none; border-radius: 50%; font-size: 1.1rem;
+      cursor: pointer; box-shadow: var(--shadow);
+      opacity: 0; pointer-events: none;
       transition: all .3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
     }
     #back-top.visible { opacity: 1; pointer-events: auto; }
     #back-top:hover { background: var(--primary-dark); transform: translateY(-2px); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      aside {
-        transform: translateX(-100%);
-      }
-      aside.open {
-        transform: translateX(0);
-        box-shadow: var(--shadow-lg);
-      }
+      aside { transform: translateX(-100%); }
+      aside.open { transform: translateX(0); box-shadow: var(--shadow-lg); }
       main { margin-left: 0; }
       footer { margin-left: 0; }
       .menu-toggle { display: block; }
-      .content { padding: 32px 24px 64px; }
+      .content { padding: 28px 20px 60px; }
       .hero { padding: 48px 24px 40px; }
       .hero h1 { font-size: 1.9rem; }
-      .card-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 560px) {
       .hero h1 { font-size: 1.5rem; }
-      .card-grid { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
       .flow { flex-direction: column; }
       .flow-arrow { transform: rotate(90deg); }
-      #back-top { bottom: 20px; right: 20px; }
     }
 
-    /* ── FADE IN ANIMATION ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    /* ── FADE IN ── */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
     /* ── OVERLAY ── */
-    #overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.4);
-      z-index: 80;
-    }
+    #overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 80; }
     #overlay.show { display: block; }
   </style>
 </head>
 <body>
 
-<!-- Scroll progress bar -->
 <div id="scroll-progress"></div>
 
-<!-- Top nav -->
 <nav class="topnav">
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">
     <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -678,43 +454,53 @@
 
 <div class="layout">
 
-  <!-- Sidebar -->
+  <!-- ── SIDEBAR ── -->
   <aside id="sidebar">
     <div class="sidebar-label">目次</div>
 
-    <a class="nav-item" href="#sec1">1. プロジェクトの目的</a>
-
-    <a class="nav-item" href="#sec2">2. GitHubの準備</a>
-    <a class="nav-sub" href="#sec2-1">2.1. アカウント・Git</a>
-    <a class="nav-sub" href="#sec2-2">2.2. リポジトリ作成</a>
-
-    <a class="nav-item" href="#sec3">3. 開発環境セットアップ</a>
-    <a class="nav-sub" href="#sec3-1">3.1. クローン</a>
-    <a class="nav-sub" href="#sec3-2">3.2. ツールインストール</a>
-
-    <a class="nav-item" href="#sec4">4. 開発フロー</a>
-    <a class="nav-sub" href="#sec4-1">4.1. サーバー起動・同期</a>
-    <a class="nav-sub" href="#sec4-2">4.2. テスト (TestEZ)</a>
-
-    <a class="nav-item" href="#sec5">5. CI の設定</a>
+    <a class="nav-item" href="#overview">使い方</a>
+    <a class="nav-item" href="#operation">セットアップ後の運用</a>
+    <a class="nav-item" href="#devflow">開発を進める流れ</a>
+    <a class="nav-item" href="#structure">資材の配置イメージ</a>
+    <a class="nav-item" href="#tools">開発環境・ツール</a>
 
     <div class="nav-divider"></div>
+    <div class="sidebar-label" style="margin-top:4px;">セットアップ手順</div>
 
-    <a class="nav-item" href="#sec6">6. 運用ルールと注意点</a>
-    <a class="nav-sub" href="#sec6-git">.gitignore</a>
-    <a class="nav-sub" href="#sec6-cmd">Gitコマンド</a>
+    <a class="nav-item" href="#sec-github">4.0. GitHubの準備</a>
+    <a class="nav-sub" href="#github-account">アカウント作成</a>
+    <a class="nav-sub" href="#github-git">Gitインストール</a>
+    <a class="nav-sub" href="#github-repo">リポジトリ作成</a>
+    <a class="nav-sub" href="#github-auth">認証の設定</a>
+
+    <a class="nav-item" href="#sec-clone">クローン</a>
+    <a class="nav-item" href="#sec-rojo">Rojoのインストール</a>
+    <a class="nav-item" href="#sec-vscode">VSCodeのセットアップ</a>
+    <a class="nav-item" href="#sec-studio">Studio接続</a>
+    <a class="nav-sub" href="#studio-plugin">プラグイン導入</a>
+    <a class="nav-sub" href="#studio-connect">接続・開発フロー</a>
+
+    <a class="nav-item" href="#sec-testez">TestEZの構築</a>
+    <a class="nav-sub" href="#wally-install">Wallyインストール</a>
+    <a class="nav-sub" href="#wally-toml">wally.toml 作成</a>
+    <a class="nav-sub" href="#testez-run">テスト実行</a>
+    <a class="nav-sub" href="#testez-runner">TestRunner作成</a>
+
+    <a class="nav-item" href="#sec-ci">GitHub Actions CI</a>
+    <a class="nav-sub" href="#foreman">foreman.toml</a>
+    <a class="nav-sub" href="#ci-workflow">workflow 設定</a>
+
+    <div class="nav-divider"></div>
+    <a class="nav-item" href="#gitignore">.gitignore</a>
+    <a class="nav-item" href="#notes">注意点</a>
   </aside>
 
-  <!-- Main content -->
   <main>
 
-    <!-- Hero -->
+    <!-- ── HERO ── -->
     <div class="hero">
       <div class="hero-inner">
-        <div class="hero-eyebrow">
-          <span class="hero-dot"></span>
-          Setup Guide
-        </div>
+        <div class="hero-eyebrow"><span class="hero-dot"></span>VSCode 使用版</div>
         <h1>Roblox <span>開発環境</span>構築ガイド</h1>
         <p class="hero-sub">Roblox Development: The Essential Setup Guide</p>
         <div class="hero-chips">
@@ -722,6 +508,7 @@
           <span class="hero-chip">🧪 TestEZ</span>
           <span class="hero-chip">⚙️ GitHub Actions</span>
           <span class="hero-chip">📦 Wally</span>
+          <span class="hero-chip">💻 VSCode</span>
         </div>
         <p class="hero-updated">最終更新日：2026/03/05</p>
       </div>
@@ -729,269 +516,677 @@
 
     <div class="content">
 
-      <!-- Section 1 -->
-      <section class="section fade-in" id="sec1">
+      <!-- ── 使い方 ── -->
+      <section class="section fade-in" id="overview">
         <div class="section-header">
-          <div class="section-num">1</div>
-          <h2 class="section-title">プロジェクトの目的</h2>
+          <div class="section-num">概</div>
+          <h2 class="section-title">使い方</h2>
         </div>
-        <p>本プロジェクトでは、Roblox上で動作するアクションゲームの開発を効率化するため、以下の開発フローを採用します。</p>
-
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon">🔗</div>
-            <div class="card-name">Rojo</div>
-            <div class="card-desc">外部エディタ（VS Code）とRoblox Studioをリアルタイム同期</div>
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-step-icon f-blue">💻</div>
+            <div class="flow-step-name">VSCode</div>
+            <div class="flow-step-sub">src/ にコードを配置</div>
           </div>
-          <div class="card">
-            <div class="card-icon">🧪</div>
-            <div class="card-name">TestEZ</div>
-            <div class="card-desc">ユニットテストによる品質管理・自動化</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-icon f-purple">🔗</div>
+            <div class="flow-step-name">Rojo</div>
+            <div class="flow-step-sub">game/ にマッピング</div>
           </div>
-          <div class="card">
-            <div class="card-icon">⚙️</div>
-            <div class="card-name">GitHub Actions</div>
-            <div class="card-desc">push時の自動ビルド・テスト検証（CI）</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-icon f-blue">🎮</div>
+            <div class="flow-step-name">Roblox Studio</div>
+            <div class="flow-step-sub">リアルタイム同期</div>
           </div>
-        </div>
-
-        <div class="progress-container">
-          <div class="progress-item">
-            <div class="progress-label"><span>Rojo — ファイル同期</span><span>VS Code ↔ Studio</span></div>
-            <div class="progress-bar"><div class="progress-fill pf-blue" data-width="90"></div></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-icon f-green">🧪</div>
+            <div class="flow-step-name">TestEZ</div>
+            <div class="flow-step-sub">ユニットテスト実行</div>
           </div>
-          <div class="progress-item">
-            <div class="progress-label"><span>TestEZ — テストカバレッジ</span><span>品質管理</span></div>
-            <div class="progress-bar"><div class="progress-fill pf-purple" data-width="75"></div></div>
-          </div>
-          <div class="progress-item">
-            <div class="progress-label"><span>GitHub Actions — CI 自動化</span><span>push 時</span></div>
-            <div class="progress-bar"><div class="progress-fill pf-green" data-width="85"></div></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step-icon f-orange">⚙️</div>
+            <div class="flow-step-name">GitHub Actions</div>
+            <div class="flow-step-sub">push 時に自動検証</div>
           </div>
         </div>
+        <ul>
+          <li>VSCode + Rojo を使って Roblox Studio とコードを同期しながら開発する</li>
+          <li><code>src/</code> 以下に Lua コードを配置し、Rojo で <code>game/</code> にマッピング</li>
+          <li>TestEZ を使ってユニットテストを実行</li>
+          <li>GitHub に push すると GitHub Actions により、Rojo が正しく動作しプロジェクトをビルドできることを自動で検証する</li>
+        </ul>
       </section>
       <div class="section-divider"></div>
 
-      <!-- Section 2 -->
-      <section class="section fade-in" id="sec2">
+      <!-- ── セットアップ後の運用 ── -->
+      <section class="section fade-in" id="operation">
         <div class="section-header">
-          <div class="section-num">2</div>
-          <h2 class="section-title">GitHubの準備</h2>
+          <div class="section-num">運</div>
+          <h2 class="section-title">セットアップ後の運用</h2>
         </div>
-
-        <h3 id="sec2-1">2.1. アカウント作成とGitインストール</h3>
+        <p>毎回の開発セッションは以下の手順で開始します。</p>
         <ol class="steps">
           <li>
             <div class="step-num">1</div>
             <div class="step-body">
-              <strong>GitHubアカウント作成</strong>
-              <a href="https://github.com/" target="_blank">GitHub.com</a> でアカウントを作成してください。
+              <strong>PowerShellを起動し、クローンしたリポジトリへ移動してVSCodeを開く</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="kw">cd</span> C:\Users\&lt;ユーザー名&gt;\source\repos\&lt;project-name&gt;
+code .</code></pre>
+              </div>
             </div>
           </li>
           <li>
             <div class="step-num">2</div>
             <div class="step-body">
-              <strong>Gitインストール</strong>
-              <a href="https://gitforwindows.org/" target="_blank">Git for Windows</a> をダウンロード・インストール。
+              <strong>VSCodeのコンソール（PowerShell）でRojoを起動する</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="nm">rojo</span> serve</code></pre>
+              </div>
             </div>
           </li>
           <li>
             <div class="step-num">3</div>
             <div class="step-body">
-              <strong>初期設定</strong>
-              PowerShellを開き、以下を実行してください。
+              <strong>Roblox Studioを起動し、制作中のバーチャル空間を選択する</strong>
+              セットアップ済みのプロジェクトファイルを開いてください。
             </div>
-          </li>
-        </ol>
-        <div class="code-block">
-          <div class="code-header">
-            <div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
-            <span class="code-lang">powershell</span>
-            <button class="copy-btn" onclick="copyCode(this)">コピー</button>
-          </div>
-          <pre><code><span class="nm">git</span> config --global user.name <span class="st">"YourName"</span>
-<span class="nm">git</span> config --global user.email <span class="st">"your-email@example.com"</span></code></pre>
-        </div>
-
-        <h3 id="sec2-2">2.2. リポジトリの作成</h3>
-        <ol class="steps">
-          <li>
-            <div class="step-num">1</div>
-            <div class="step-body"><strong>[New repository] を作成</strong>GitHubのダッシュボードから新規リポジトリを作成。</div>
-          </li>
-          <li>
-            <div class="step-num">2</div>
-            <div class="step-body"><strong>Repository name</strong><code>roblox-project-name</code>（任意の名前）</div>
-          </li>
-          <li>
-            <div class="step-num">3</div>
-            <div class="step-body"><strong>Public / Private</strong>プロジェクトに合わせて選択。</div>
           </li>
           <li>
             <div class="step-num">4</div>
-            <div class="step-body"><strong>Initialize</strong>「Add a README file」にチェック、「.gitignore」は <strong>Roblox</strong> を選択。</div>
-          </li>
-          <li>
-            <div class="step-num">5</div>
-            <div class="step-body"><strong>URL をコピー</strong>緑色の <strong>[&lt;&gt; Code]</strong> ボタンからHTTPS URLをコピー。</div>
+            <div class="step-body">
+              <strong>Roblox StudioのプラグインからRojoを開き「Connect」を押下する</strong>
+              VSCode側のコードがStudioに同期されます。
+            </div>
           </li>
         </ol>
       </section>
       <div class="section-divider"></div>
 
-      <!-- Section 3 -->
-      <section class="section fade-in" id="sec3">
+      <!-- ── 開発を進める流れ ── -->
+      <section class="section fade-in" id="devflow">
         <div class="section-header">
-          <div class="section-num">3</div>
-          <h2 class="section-title">開発環境のセットアップ</h2>
+          <div class="section-num">流</div>
+          <h2 class="section-title">開発を進める流れ</h2>
         </div>
+        <ol class="steps">
+          <li><div class="step-num">1</div><div class="step-body"><strong>本番コードを書く</strong><code>src/</code> に本番コードを実装する</div></li>
+          <li><div class="step-num">2</div><div class="step-body"><strong>テストを書く</strong><code>src/tests/</code> に対応するテストを書く</div></li>
+          <li><div class="step-num">3</div><div class="step-body"><strong>動作確認</strong>Roblox Studio で Rojo 経由で同期して動作確認（1〜3を繰り返し）</div></li>
+          <li><div class="step-num">4</div><div class="step-body"><strong>push &amp; CI 自動テスト</strong>GitHub に push → CI が自動テスト（結果をGitHubのActionsタブで確認）</div></li>
+        </ol>
 
-        <h3 id="sec3-1">3.1. リポジトリのクローン</h3>
-        <div class="code-block">
-          <div class="code-header">
-            <div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
-            <span class="code-lang">powershell</span>
-            <button class="copy-btn" onclick="copyCode(this)">コピー</button>
-          </div>
-          <pre><code><span class="cm"># 作業用フォルダへ移動（例）</span>
-<span class="kw">cd</span> C:\Users\&lt;PCユーザー名&gt;\source\repos
-<span class="cm"># クローン実行</span>
-<span class="nm">git</span> clone https://github.com/&lt;GitHubユーザー名&gt;/roblox-project-name.git
-<span class="kw">cd</span> roblox-project-name</code></pre>
-        </div>
-
-        <h3 id="sec3-2">3.2. 必須ツールのインストール</h3>
-
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon">🔗</div>
-            <div class="card-name">Rojo</div>
-            <div class="card-desc"><a href="https://github.com/rojo-rbx/rojo/releases" target="_blank">Rojo Releases</a> からWindows用zipをダウンロード</div>
-          </div>
-          <div class="card">
-            <div class="card-icon">📦</div>
-            <div class="card-name">Wally</div>
-            <div class="card-desc"><a href="https://github.com/UpliftGames/wally/releases" target="_blank">Wally Releases</a> からWindows用zipをダウンロード</div>
-          </div>
-        </div>
-
-        <div class="info">
-          <span class="callout-icon">💡</span>
-          <div class="callout-body">
-            <strong>インストール手順（Rojo・Wally 共通）</strong><br>
-            <code>.exe</code> を任意フォルダ（例：<code>C:\Users\&lt;PCユーザー名&gt;\AppData\Local\Programs\DevTools</code>）に配置し、そのフォルダを <strong>環境変数 (PATH)</strong> に追加してください。
-          </div>
-        </div>
-
-        <h3>VS Code 拡張機能</h3>
+        <h3 style="margin-top:28px;">基本的なGitコマンド</h3>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>拡張機能</th><th>用途</th></tr></thead>
+            <thead><tr><th>操作</th><th>コマンド</th><th>説明</th></tr></thead>
             <tbody>
-              <tr><td><code>Rojo</code></td><td>Studio との同期操作</td></tr>
-              <tr><td><code>Luau Language Server</code></td><td>Luau の補完・型チェック</td></tr>
+              <tr><td>資材をステージング</td><td><code>git add -A</code></td><td>ローカルの変更をgitリポジトリへ上げる</td></tr>
+              <tr><td>コミット</td><td><code>git commit -m "メッセージ"</code></td><td>上げた資材をリモートで確定するイメージ</td></tr>
+              <tr><td>プッシュ</td><td><code>git push</code></td><td>コミットした資材をリポジトリで確定するイメージ</td></tr>
+              <tr><td>プル</td><td><code>git pull</code></td><td>リポジトリからローカルへ資材を落とす</td></tr>
             </tbody>
           </table>
         </div>
       </section>
       <div class="section-divider"></div>
 
-      <!-- Section 4 -->
-      <section class="section fade-in" id="sec4">
+      <!-- ── 資材の配置イメージ ── -->
+      <section class="section fade-in" id="structure">
         <div class="section-header">
-          <div class="section-num">4</div>
-          <h2 class="section-title">開発フロー</h2>
+          <div class="section-num">構</div>
+          <h2 class="section-title">資材の配置イメージ</h2>
+        </div>
+        <div class="filetree">
+<span class="ft-dir">src/</span>
+  <span class="ft-dir">├ server/</span>
+  <span class="ft-file">│   └ AAA.server.lua</span>    <span class="ft-comment">← サーバー側スクリプト</span>
+  <span class="ft-dir">├ shared/</span>
+  <span class="ft-file">│   └ BBB.lua</span>           <span class="ft-comment">← 共通モジュール</span>
+  <span class="ft-dir">├ runner/</span>
+  <span class="ft-file">│   └ TestRunner.server.lua</span> <span class="ft-comment">← テスト実行スクリプト</span>
+  <span class="ft-dir">└ tests/</span>
+  <span class="ft-file">    ├ AAA.spec.lua</span>        <span class="ft-comment">← server のテスト</span>
+  <span class="ft-file">    └ BBB.spec.lua</span>        <span class="ft-comment">← shared のテスト</span>
+        </div>
+      </section>
+      <div class="section-divider"></div>
+
+      <!-- ── 開発環境・ツール ── -->
+      <section class="section fade-in" id="tools">
+        <div class="section-header">
+          <div class="section-num">環</div>
+          <h2 class="section-title">開発環境・ツール一覧</h2>
+        </div>
+        <div class="card-grid">
+          <div class="card"><div class="card-icon">🎮</div><div class="card-name">Roblox Studio</div><div class="card-desc">Robloxゲームの開発・動作確認環境</div></div>
+          <div class="card"><div class="card-icon">💻</div><div class="card-name">VSCode</div><div class="card-desc">メインのコードエディタ（外部編集）</div></div>
+          <div class="card"><div class="card-icon">🔗</div><div class="card-name">Rojo</div><div class="card-desc">VSCode ↔ Studio のリアルタイム同期ツール</div></div>
+          <div class="card"><div class="card-icon">🧪</div><div class="card-name">TestEZ</div><div class="card-desc">Luaのユニットテストフレームワーク</div></div>
+          <div class="card"><div class="card-icon">📦</div><div class="card-name">Wally</div><div class="card-desc">Roblox向けパッケージマネージャー</div></div>
+          <div class="card"><div class="card-icon">🐙</div><div class="card-name">Git / GitHub</div><div class="card-desc">バージョン管理・リポジトリホスティング</div></div>
+          <div class="card"><div class="card-icon">⚙️</div><div class="card-name">GitHub Actions</div><div class="card-desc">push時の自動ビルド・テスト（CI）</div></div>
+        </div>
+        <h3>VSCode 拡張機能</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>拡張機能</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td><code>Rojo</code></td><td>StudioとのRojo接続・同期操作</td></tr>
+              <tr><td><code>Luau Language Server</code></td><td>Luauの補完・型チェック・シンタックスハイライト</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="section-divider"></div>
+
+      <!-- ============================================================
+           セットアップ手順
+      ============================================================ -->
+
+      <!-- ── 4.0 GitHubの準備 ── -->
+      <section class="section fade-in" id="sec-github">
+        <div class="section-header">
+          <div class="section-num">4.0</div>
+          <h2 class="section-title">GitHubの準備</h2>
         </div>
 
-        <div class="flow">
-          <div class="flow-step">
-            <div class="flow-step-icon f-blue">💻</div>
-            <div class="flow-step-name">VS Code</div>
-            <div class="flow-step-sub">コード編集</div>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">
-            <div class="flow-step-icon f-purple">🔗</div>
-            <div class="flow-step-name">Rojo Serve</div>
-            <div class="flow-step-sub">自動同期</div>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">
-            <div class="flow-step-icon f-blue">🎮</div>
-            <div class="flow-step-name">Roblox Studio</div>
-            <div class="flow-step-sub">動作確認</div>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">
-            <div class="flow-step-icon f-green">✅</div>
-            <div class="flow-step-name">TestEZ</div>
-            <div class="flow-step-sub">自動テスト</div>
-          </div>
-        </div>
+        <h3 id="github-account">1. GitHubアカウントの作成</h3>
+        <ol class="steps">
+          <li><div class="step-num">1</div><div class="step-body"><a href="https://github.com/" target="_blank">GitHub公式サイト</a>にアクセスし、<strong>「Sign up」</strong>をクリックします。</div></li>
+          <li><div class="step-num">2</div><div class="step-body">メールアドレス、パスワード、ユーザー名を入力して登録を完了させます。</div></li>
+          <li><div class="step-num">3</div><div class="step-body">登録したメールアドレスに届く認証コードを入力して、アカウントを有効化してください。</div></li>
+        </ol>
 
-        <h3 id="sec4-1">4.1. サーバー起動と同期</h3>
+        <h3 id="github-git">2. Gitのインストールと初期設定</h3>
         <ol class="steps">
           <li>
             <div class="step-num">1</div>
             <div class="step-body">
-              <strong>Rojo サーバーを起動</strong>
-              VS Codeのターミナルで以下を実行：
+              <strong>Gitのインストール</strong>
+              <a href="https://gitforwindows.org/" target="_blank">Git for Windows</a> からインストーラーをダウンロードして実行します（設定はすべて「Next」でOK）。
+            </div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>初期設定</strong>
+              PowerShellを開き、以下のコマンドで名前とメールアドレスを設定します。
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="nm">git</span> config --global user.name <span class="st">"Your Name"</span>
+<span class="nm">git</span> config --global user.email <span class="st">"your-email@example.com"</span></code></pre>
+              </div>
             </div>
           </li>
         </ol>
+
+        <h3 id="github-repo">3. プロジェクト用リポジトリの作成</h3>
+        <ol class="steps">
+          <li><div class="step-num">1</div><div class="step-body">GitHubのトップ画面左側、または右上の「＋」アイコンから <strong>「New repository」</strong> をクリックします。</div></li>
+          <li><div class="step-num">2</div><div class="step-body"><strong>Repository name</strong>：プロジェクト名を入力（例：<code>my-roblox-game</code>）。</div></li>
+          <li><div class="step-num">3</div><div class="step-body"><strong>Public / Private</strong>：チーム内のみなら「Private」、公開するなら「Public」を選択。</div></li>
+          <li>
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>Initialize this repository with：</strong>
+              <ul style="margin-top:6px;">
+                <li><strong>Add a README file</strong>：チェックを入れる</li>
+                <li><strong>Add .gitignore</strong>：「Roblox」で検索して選択</li>
+                <li><strong>Choose a license</strong>：「MIT License」などを選択</li>
+              </ul>
+            </div>
+          </li>
+          <li><div class="step-num">5</div><div class="step-body"><strong>「Create repository」</strong> をクリックして完了。</div></li>
+          <li><div class="step-num">6</div><div class="step-body">作成したリポジトリの緑色の <strong>「&lt;&gt; Code」</strong> ボタンをクリックし、「HTTPS」タブのURL（<code>https://github.com/&lt;ユーザー名&gt;/&lt;project-name&gt;.git</code>）をコピーします。このURLを次のクローン手順で使用します。</div></li>
+        </ol>
+
+        <h3 id="github-auth">4. 認証の設定（重要）</h3>
+        <div class="warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">最近のGitHubはパスワードだけで <code>git push</code> ができません。以下のいずれかの設定が必要です。</div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>方法</th><th>説明</th><th>難易度</th></tr></thead>
+            <tbody>
+              <tr><td><strong>GitHub Desktop</strong></td><td>ツール側でログインするだけで済む。初心者に最もおすすめ</td><td>⭐ 簡単</td></tr>
+              <tr><td><strong>Personal Access Token (PAT)</strong></td><td>ブラウザの「Settings」→「Developer settings」から発行し、パスワードの代わりに使用</td><td>⭐⭐ 普通</td></tr>
+              <tr><td><strong>SSH Key</strong></td><td>鍵交換によるセキュアな接続。エンジニアがよく使う方法</td><td>⭐⭐⭐ 上級</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="section-divider"></div>
+
+      <!-- ── クローン ── -->
+      <section class="section fade-in" id="sec-clone">
+        <div class="section-header">
+          <div class="section-num">4.1</div>
+          <h2 class="section-title">リポジトリのクローン</h2>
+        </div>
+        <p>実行環境：PowerShell</p>
         <div class="code-block">
-          <div class="code-header">
-            <div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
-            <span class="code-lang">powershell</span>
-            <button class="copy-btn" onclick="copyCode(this)">コピー</button>
-          </div>
-          <pre><code><span class="nm">rojo</span> serve</code></pre>
+          <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+          <pre><code><span class="cm"># clone先フォルダのおすすめ構成</span>
+<span class="kw">cd</span> C:\Users\&lt;ユーザー名&gt;\source\repos
+<span class="nm">git</span> clone https://github.com/&lt;GitHubユーザー名&gt;/&lt;project-name&gt;.git
+<span class="kw">cd</span> &lt;project-name&gt;</code></pre>
         </div>
-        <ol class="steps">
-          <li>
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <strong>Studio と接続</strong>
-              Roblox Studioを開き、Rojoプラグインから「Connect」を押下。
-            </div>
-          </li>
-        </ol>
-        <div class="tip">
-          <span class="callout-icon">✅</span>
-          <div class="callout-body"><code>src/</code> 内のコードが Studio の <code>ReplicatedStorage</code> 等へリアルタイム同期されます。</div>
-        </div>
+      </section>
+      <div class="section-divider"></div>
 
-        <h3 id="sec4-2">4.2. テストの実行 (TestEZ)</h3>
+      <!-- ── Rojo インストール ── -->
+      <section class="section fade-in" id="sec-rojo">
+        <div class="section-header">
+          <div class="section-num">4.2</div>
+          <h2 class="section-title">Rojoのインストール</h2>
+        </div>
+        <p>実行環境：PowerShell</p>
+        <p>インストール方法は2つあります。<strong>Windowsはバイナリダウンロードが安定しておすすめです。</strong></p>
+
+        <details>
+          <summary>方法A：cargo でインストール（Rust 環境が必要）</summary>
+          <div class="details-body" style="padding-top:16px;">
+            <div class="code-block">
+              <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+              <pre><code><span class="nm">cargo</span> install rojo</code></pre>
+            </div>
+          </div>
+        </details>
+
+        <h4>方法B：バイナリをダウンロード（おすすめ）</h4>
         <ol class="steps">
-          <li>
-            <div class="step-num">1</div>
-            <div class="step-body"><strong>依存関係の導入</strong><code>wally install</code> を実行し <code>Packages/</code> を生成。</div>
-          </li>
-          <li>
-            <div class="step-num">2</div>
-            <div class="step-body"><strong>テストコード作成</strong><code>src/tests/</code> 内に <code>.spec.lua</code> ファイルを作成。</div>
-          </li>
+          <li><div class="step-num">1</div><div class="step-body"><a href="https://github.com/rojo-rbx/rojo/releases" target="_blank">Rojo 公式リリースページ</a>を開き、最新版の Assets から Windows用 zip（例：<code>rojo-x.x.x-windows-x86_64.zip</code>）をダウンロードして解凍する。</div></li>
+          <li><div class="step-num">2</div><div class="step-body">中にある <code>rojo.exe</code> を任意のフォルダ（例：<code>C:\Users\&lt;ユーザー名&gt;\AppData\Local\Programs\Rojo</code>）に置く（フォルダは自分で作成して OK）。</div></li>
           <li>
             <div class="step-num">3</div>
-            <div class="step-body"><strong>実行</strong>Studioの「プレイ (F5)」を押すと、<code>TestRunner</code> スクリプトにより自動でテスト結果が出力されます。</div>
+            <div class="step-body">
+              <strong>そのフォルダをPATHに追加する</strong>
+              <ul style="margin-top:6px;">
+                <li>Windowsキー →「環境変数」→「環境変数の編集」</li>
+                <li>「Path」を選択 →「編集」</li>
+                <li><code>C:\Users\&lt;ユーザー名&gt;\AppData\Local\Programs\Rojo</code> を追加</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>PowerShellを新しいウィンドウで開いて動作確認する</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="nm">rojo</span> --version   <span class="cm"># バージョンが表示されればOK</span></code></pre>
+              </div>
+            </div>
           </li>
         </ol>
       </section>
       <div class="section-divider"></div>
 
-      <!-- Section 5 -->
-      <section class="section fade-in" id="sec5">
+      <!-- ── VSCode セットアップ ── -->
+      <section class="section fade-in" id="sec-vscode">
         <div class="section-header">
-          <div class="section-num">5</div>
-          <h2 class="section-title">CI (GitHub Actions) の設定</h2>
+          <div class="section-num">4.3</div>
+          <h2 class="section-title">VSCodeのセットアップ</h2>
         </div>
-        <p>リポジトリの <code>.github/workflows/test.yml</code> に以下を配置することで、pushのたびに自動テストが走ります。</p>
+
+        <h3>VSCodeの起動</h3>
+        <p>実行環境：PowerShell</p>
         <div class="code-block">
-          <div class="code-header">
-            <div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
-            <span class="code-lang">yaml</span>
-            <button class="copy-btn" onclick="copyCode(this)">コピー</button>
+          <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+          <pre><code><span class="kw">cd</span> C:\Users\&lt;ユーザー名&gt;\source\repos\&lt;project-name&gt;
+code .</code></pre>
+        </div>
+
+        <h3>拡張機能のインストール</h3>
+        <ol class="steps">
+          <li><div class="step-num">1</div><div class="step-body">VSCodeの拡張機能パネルを開き、<strong>「Rojo」</strong> を検索してインストールする。</div></li>
+          <li><div class="step-num">2</div><div class="step-body"><strong>「Luau Language Server」</strong> を検索してインストールする。</div></li>
+        </ol>
+
+        <h3>Rojoプロジェクトの起動</h3>
+        <p>実行環境：VSCode（ターミナル）</p>
+        <div class="code-block">
+          <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+          <pre><code><span class="nm">rojo</span> serve   <span class="cm"># 「Rojo server listening on port 34872」のようなメッセージが出ればOK</span></code></pre>
+        </div>
+
+        <div class="info">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <strong>新規プロジェクトの場合</strong><br>
+            <code>[ERROR rojo] Rojo requires a project file, but no project file was found …default.project.json</code> のようなエラーが出た場合は、プロジェクトルートに <code>default.project.json</code> が存在しません。以下のコマンドで生成してください。
+            <div class="code-block" style="margin-top:10px;">
+              <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+              <pre><code><span class="nm">rojo</span> init</code></pre>
+            </div>
           </div>
+        </div>
+      </section>
+      <div class="section-divider"></div>
+
+      <!-- ── Studio 接続 ── -->
+      <section class="section fade-in" id="sec-studio">
+        <div class="section-header">
+          <div class="section-num">4.4</div>
+          <h2 class="section-title">Roblox StudioでRojoプラグインに接続</h2>
+        </div>
+
+        <h3 id="studio-plugin">Rojoプラグインのインストール</h3>
+        <ol class="steps">
+          <li><div class="step-num">1</div><div class="step-body">Roblox Studio を開く。</div></li>
+          <li><div class="step-num">2</div><div class="step-body">上部メニューの <strong>Plugins（プラグイン）</strong> をクリック。</div></li>
+          <li><div class="step-num">3</div><div class="step-body"><strong>Manage Plugins（プラグイン管理）</strong> を開く。</div></li>
+          <li><div class="step-num">4</div><div class="step-body">右上の「Find Plugins（プラグインを探す）」または「＋」をクリック。</div></li>
+          <li><div class="step-num">5</div><div class="step-body">ツールボックスの検索欄に <strong>「Rojo」</strong> と入力し、公式のRojoを選んで「Install（インストール）」。</div></li>
+          <li><div class="step-num">6</div><div class="step-body">インストール後、Studio中央の <strong>Plugins（プラグイン）</strong> タブに Rojo ボタンが表示される。</div></li>
+        </ol>
+
+        <h3 id="studio-connect">Rojoプラグインの動作確認と接続</h3>
+        <p>VSCode側で <code>rojo serve</code> が動いている状態で、Studio の Rojo ボタンを押すと：</p>
+        <ol class="steps">
+          <li><div class="step-num">1</div><div class="step-body">Rojo の窓が開き、ポート番号 <code>34872</code> が表示される（自動）。</div></li>
+          <li><div class="step-num">2</div><div class="step-body"><strong>「Connect」</strong> をクリック → VSCode の <code>src/</code> が Studio の <code>ReplicatedStorage/Source</code> に同期される。</div></li>
+        </ol>
+        <div class="warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">Roblox Studio の Rojo プラグインと VSCode で参照している Rojo CI のバージョンが一致しないと接続できないことがあります。その場合はどちらかのバージョンをアップグレードまたはダウングレードしてください。</div>
+        </div>
+
+        <h3>Rojo接続後の開発フロー</h3>
+        <div class="tip">
+          <span class="callout-icon">✅</span>
+          <div class="callout-body">Rojo を使う場合、<strong>Roblox Studio 側でスクリプトを直接作成・編集しないのが基本</strong>です。Studio 側で編集すると Rojo の同期で上書きされてしまいます。<strong>VSCode 側が唯一の編集場所</strong>になります。</div>
+        </div>
+        <div class="flow" style="margin-top:16px;">
+          <div class="flow-step"><div class="flow-step-icon f-blue">💻</div><div class="flow-step-name">VSCode で編集</div><div class="flow-step-sub">src/ に Lua ファイルを作る</div></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><div class="flow-step-icon f-purple">🔗</div><div class="flow-step-name">Rojo が自動同期</div><div class="flow-step-sub">Studio に即時反映</div></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><div class="flow-step-icon f-blue">🎮</div><div class="flow-step-name">Studio で確認</div><div class="flow-step-sub">動作確認のみ</div></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><div class="flow-step-icon f-green">🐙</div><div class="flow-step-name">GitHub に push</div><div class="flow-step-sub">バージョン管理</div></div>
+        </div>
+      </section>
+      <div class="section-divider"></div>
+
+      <!-- ── TestEZ ── -->
+      <section class="section fade-in" id="sec-testez">
+        <div class="section-header">
+          <div class="section-num">4.5</div>
+          <h2 class="section-title">TestEZの構築</h2>
+        </div>
+        <p>Wally を使って TestEZ を導入します。</p>
+
+        <h3 id="wally-install">Wallyのインストール（ブラウザで直接ダウンロード・おすすめ）</h3>
+        <ol class="steps">
+          <li>
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Wallyをダウンロード</strong>
+              <a href="https://github.com/UpliftGames/wally/releases/latest" target="_blank">Wally Releases</a> を開き、Assets にある <code>wally-windows.exe</code> を含む zip をダウンロードして解凍する。
+            </div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>wally.exe を配置</strong>
+              <code>wally.exe</code> を任意のフォルダ（例：<code>C:\Users\&lt;ユーザー名&gt;\AppData\Local\Programs\Wally</code>）に置く（フォルダは自分で作成して OK）。
+            </div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>PATHへ追加</strong>
+              Windowsキー →「環境変数」→「環境変数の編集」→「Path」を選択 →「編集」→ <code>C:\Users\&lt;ユーザー名&gt;\AppData\Local\Programs\Wally</code> を追加。
+            </div>
+          </li>
+          <li>
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>動作確認</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="nm">wally</span> --version</code></pre>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <h3 id="wally-toml">wally.toml の作成</h3>
+        <p>実行環境：VSCode</p>
+        <ol class="steps">
+          <li><div class="step-num">1</div><div class="step-body">VSCode の左側でプロジェクトルートを右クリックし「新しいファイル」を選択。</div></li>
+          <li><div class="step-num">2</div><div class="step-body">ファイル名 <code>wally.toml</code> を入力して作成する。</div></li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>以下の内容を貼り付ける（TestEZ 導入用）</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">toml</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code>[package]
+name = <span class="st">"&lt;GitHubユーザー名&gt;/&lt;project-name-lowercase&gt;"</span>
+version = <span class="st">"0.1.0"</span>
+registry = <span class="st">"https://github.com/UpliftGames/wally-index"</span>
+realm = <span class="st">"shared"</span>
+
+[dependencies]
+TestEZ = <span class="st">"roblox/testez@0.4.1"</span></code></pre>
+              </div>
+              <div class="info" style="margin-top:10px;">
+                <span class="callout-icon">💡</span>
+                <div class="callout-body">
+                  <code>name</code> は GitHub のユーザー名に合わせて変更してOK。<br>
+                  プロジェクト名は <strong>小文字で設定</strong>してください（例：<code>My-Roblox-Game</code> → <code>my-roblox-game</code>）。
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>Wally を適用する</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">powershell</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="nm">wally</span> install   <span class="cm"># プロジェクト内に Packages/ フォルダが生成されればOK</span></code></pre>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <h3 id="testez-run">TestEZの実行準備</h3>
+        <p>まず <code>default.project.json</code> に Packages のマッピングを追加します。</p>
+        <div class="code-block">
+          <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">json</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+          <pre><code>{
+    <span class="nm">"name"</span>: <span class="st">"&lt;project-name&gt;"</span>,
+    <span class="nm">"tree"</span>: {
+        <span class="nm">"$className"</span>: <span class="st">"DataModel"</span>,
+        <span class="nm">"ReplicatedStorage"</span>: {
+            <span class="nm">"$className"</span>: <span class="st">"ReplicatedStorage"</span>,
+            <span class="nm">"shared"</span>: {
+                <span class="nm">"$path"</span>: <span class="st">"src/shared"</span>
+            },
+            <span class="nm">"Packages"</span>: {
+                <span class="nm">"$path"</span>: <span class="st">"Packages"</span>
+            }
+        },
+        <span class="nm">"ServerScriptService"</span>: {
+            <span class="nm">"$className"</span>: <span class="st">"ServerScriptService"</span>,
+            <span class="nm">"Server"</span>: {
+                <span class="nm">"$path"</span>: <span class="st">"src/server"</span>
+            },
+            <span class="nm">"TestRunner"</span>: {
+                <span class="nm">"$path"</span>: <span class="st">"src/runner"</span>
+            }
+        }
+    }
+}</code></pre>
+        </div>
+
+        <p>次にテストコードを作成して動作確認します。</p>
+        <ol class="steps">
+          <li><div class="step-num">1</div><div class="step-body"><code>src/tests/</code> フォルダを作成する。</div></li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong><code>src/tests/example.spec.lua</code> を作成し、サンプルコードを記述する</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">lua</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="kw">return</span> <span class="kw">function</span>()
+    describe(<span class="st">"math"</span>, <span class="kw">function</span>()
+        it(<span class="st">"adds numbers"</span>, <span class="kw">function</span>()
+            expect(<span class="nm">1</span> + <span class="nm">1</span>).to.equal(<span class="nm">2</span>)
+        <span class="kw">end</span>)
+    <span class="kw">end</span>)
+<span class="kw">end</span></code></pre>
+              </div>
+              保存すると、Studio側の <code>ReplicatedStorage/Source/tests</code> に自動同期されます。
+            </div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Roblox Studio で TestEZ を実行する</strong>
+              Rojo 接続中の Studio 上で、TestEZ の UI がない場合は Command Bar で以下を実行：
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">lua</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="kw">local</span> TestEZ = require(game.ReplicatedStorage.Packages.TestEZ)
+<span class="kw">local</span> results = TestEZ.TestBootstrap:run({game.ReplicatedStorage.Source.tests})
+print(results)</code></pre>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <h3 id="testez-runner">TestRunner（UI）の作成</h3>
+        <p>「プレイ（F5）」を押すだけでテストが走るよう、TestRunner を設定します。</p>
+        <ol class="steps">
+          <li>
+            <div class="step-num">①</div>
+            <div class="step-body">
+              <strong><code>src/runner/</code> フォルダを作成する</strong>
+              <div class="filetree" style="margin-top:10px;">
+<span class="ft-dir">src/</span>
+  <span class="ft-dir">├ tests/</span>
+  <span class="ft-dir">└ runner/</span>   <span class="ft-comment">← 新規作成</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">②</div>
+            <div class="step-body">
+              <strong><code>src/runner/TestRunner.server.lua</code> を作成</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">lua</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code><span class="kw">local</span> TestEZ = require(game.ReplicatedStorage.Packages.TestEZ)
+<span class="kw">local</span> results = TestEZ.TestBootstrap:run({
+    game.ReplicatedStorage.Source.tests
+}, TestEZ.Reporters.TextReporter)
+print(<span class="st">"===== TestEZ Finished ====="</span>)</code></pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">③</div>
+            <div class="step-body">
+              <strong>Rojo の <code>default.project.json</code> に runner を追加する</strong>
+              <div class="code-block" style="margin-top:10px;">
+                <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">json</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+                <pre><code>{
+    <span class="nm">"name"</span>: <span class="st">"&lt;project-name&gt;"</span>,
+    <span class="nm">"tree"</span>: {
+        <span class="nm">"$className"</span>: <span class="st">"DataModel"</span>,
+        <span class="nm">"ReplicatedStorage"</span>: {
+            <span class="nm">"$className"</span>: <span class="st">"ReplicatedStorage"</span>,
+            <span class="nm">"Source"</span>: {
+                <span class="nm">"$path"</span>: <span class="st">"src"</span>
+            },
+            <span class="nm">"Packages"</span>: {
+                <span class="nm">"$path"</span>: <span class="st">"Packages"</span>
+            }
+        },
+        <span class="nm">"ServerScriptService"</span>: {
+            <span class="nm">"$className"</span>: <span class="st">"ServerScriptService"</span>,
+            <span class="nm">"TestRunner"</span>: {
+                <span class="nm">"$path"</span>: <span class="st">"src/runner"</span>
+            }
+        }
+    }
+}</code></pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">④</div>
+            <div class="step-body">
+              <strong>Studio で TestEZ 実行を確認</strong>
+              「プレイ（F5）」を押すと「出力」にテスト実行結果が表示されます。
+            </div>
+          </li>
+        </ol>
+      </section>
+      <div class="section-divider"></div>
+
+      <!-- ── GitHub Actions CI ── -->
+      <section class="section fade-in" id="sec-ci">
+        <div class="section-header">
+          <div class="section-num">4.6</div>
+          <h2 class="section-title">GitHub Actions の自動テスト（CI）を設定</h2>
+        </div>
+
+        <p>GitHub Actions は GitHub のサーバー上で TestEZ を実行します。必要な構成は以下の3つです。</p>
+        <div class="card-grid">
+          <div class="card"><div class="card-icon">🔧</div><div class="card-name">Foreman</div><div class="card-desc">Roblox CLI のパッケージ管理ツール</div></div>
+          <div class="card"><div class="card-icon">📦</div><div class="card-name">Wally</div><div class="card-desc">依存パッケージ管理（TestEZ等）</div></div>
+          <div class="card"><div class="card-icon">⚙️</div><div class="card-name">workflow</div><div class="card-desc">push のたびに自動テストを実行</div></div>
+        </div>
+        <div class="info">
+          <span class="callout-icon">ℹ️</span>
+          <div class="callout-body">前提：VSCode に <strong>GitHub Actions プラグイン</strong>をインストール済みであること。</div>
+        </div>
+
+        <h3 id="foreman">foreman.toml の追加</h3>
+        <p>実行環境：VSCode</p>
+        <p>プロジェクトルートに <code>foreman.toml</code> を作成し、以下を記載します。</p>
+        <div class="code-block">
+          <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">toml</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+          <pre><code>[tools]
+wally = { source = <span class="st">"UpliftGames/wally"</span>, version = <span class="st">"0.3.2"</span> }
+rojo  = { source = <span class="st">"rojo-rbx/rojo"</span>,       version = <span class="st">"7.6.1"</span>  }</code></pre>
+        </div>
+        <div class="info">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            version はインストール済みの実際のバージョンを設定してください。不明な場合はターミナルで確認できます。<br>
+            <code>wally --version</code> &nbsp;/&nbsp; <code>rojo --version</code>
+          </div>
+        </div>
+
+        <h3>test.project.json の追加</h3>
+        <p>プロジェクトルートに <code>test.project.json</code> を作成します。これは GitHub Actions が TestEZ を実行するための「テスト専用の Rojo プロジェクト」です。</p>
+        <div class="code-block">
+          <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">json</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
+          <pre><code>{
+    <span class="nm">"name"</span>: <span class="st">"tests"</span>,
+    <span class="nm">"tree"</span>: {
+        <span class="nm">"$path"</span>: <span class="st">"src/tests"</span>
+    }
+}</code></pre>
+        </div>
+
+        <h3 id="ci-workflow">GitHub Actions の workflow を追加</h3>
+        <p>実行環境：VSCode</p>
+        <p><code>.github/workflows/test.yml</code> を作成し、以下を記載します。</p>
+        <div class="code-block">
+          <div class="code-header"><div class="code-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div><span class="code-lang">yaml</span><button class="copy-btn" onclick="copyCode(this)">コピー</button></div>
           <pre><code><span class="nm">name</span>: Test
 <span class="nm">on</span>: [push, pull_request]
 
@@ -1000,67 +1195,75 @@
     <span class="nm">runs-on</span>: ubuntu-latest
     <span class="nm">steps</span>:
       - <span class="nm">uses</span>: actions/checkout@v4
-      - <span class="nm">name</span>: Install Foreman (Tools)
+
+      - <span class="nm">name</span>: Install Foreman
         <span class="nm">run</span>: |
           curl -L https://github.com/Roblox/foreman/releases/latest/download/foreman-linux-x86_64.zip -o foreman.zip
           unzip foreman.zip
           chmod +x foreman
           sudo mv foreman /usr/local/bin/
-      - <span class="nm">name</span>: Install Wally &amp; Rojo
+
+      - <span class="nm">name</span>: Install tools (Wally &amp; Rojo)
         <span class="nm">run</span>: foreman install
-      - <span class="nm">name</span>: Add Path
+
+      - <span class="nm">name</span>: Add Foreman tools to PATH
         <span class="nm">run</span>: echo "$HOME/.foreman/bin" &gt;&gt; $GITHUB_PATH
-      - <span class="nm">name</span>: Build &amp; Verify
+
+      - <span class="nm">name</span>: Install Wally packages
+        <span class="nm">run</span>: wally install
+
+      - <span class="nm">name</span>: Build place
         <span class="nm">run</span>: rojo build test.project.json -o test.rbxl</code></pre>
+        </div>
+
+        <div class="tip">
+          <span class="callout-icon">✅</span>
+          <div class="callout-body">
+            GitHub に push すると、<strong>Actions タブ</strong>に「Test」ジョブが走り、成功・失敗が GitHub 上で確認できます。
+          </div>
         </div>
       </section>
       <div class="section-divider"></div>
 
-      <!-- Section 6 -->
-      <section class="section fade-in" id="sec6">
+      <!-- ── .gitignore ── -->
+      <section class="section fade-in" id="gitignore">
         <div class="section-header">
-          <div class="section-num">6</div>
-          <h2 class="section-title">運用ルールと注意点</h2>
+          <div class="section-num alt">除</div>
+          <h2 class="section-title">.gitignore について</h2>
         </div>
-
-        <h3 id="sec6-git">.gitignore の徹底</h3>
         <div class="warn">
           <span class="callout-icon">⚠️</span>
-          <div class="callout-body">
-            以下のファイルは <strong>絶対にGitに含めない</strong> でください（リポジトリの肥大化や競合を防ぐため）。
-          </div>
+          <div class="callout-body">以下のファイルは <strong>絶対にGitに含めない</strong>でください。</div>
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>対象</th><th>理由</th></tr></thead>
+            <thead><tr><th>除外対象</th><th>理由</th></tr></thead>
             <tbody>
-              <tr><td><code>.rbxl</code> / <code>.rbxm</code></td><td>Robloxバイナリファイル — サイズが大きく差分管理が困難</td></tr>
-              <tr><td><code>Packages/</code></td><td>Wallyで管理するため、コミット不要</td></tr>
-              <tr><td><code>.vscode/</code></td><td>個人設定 — チーム間で競合が発生する</td></tr>
+              <tr><td><code>.rbxl</code> / <code>.rbxm</code></td><td>Robloxバイナリファイル。差分が取れず容量も巨大になるため<strong>絶対に除外</strong>。Git に入れるとリポジトリが壊れることがある</td></tr>
+              <tr><td><code>out/</code> / <code>build/</code></td><td>Rojo の出力・生成物。コミット不要</td></tr>
+              <tr><td><code>.vscode/</code></td><td>個人の環境依存設定。チーム開発で競合の原因になる</td></tr>
+              <tr><td><code>Packages/</code></td><td>Wallyで管理する依存ファイル。<code>wally install</code> で再構築できるためコミット不要</td></tr>
+              <tr><td><code>coverage/</code> など</td><td>CI の一時ファイル。生成物はコミットしない</td></tr>
             </tbody>
           </table>
         </div>
+      </section>
+      <div class="section-divider"></div>
 
-        <h3 id="sec6-cmd">基本的なGitコマンド</h3>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>操作</th><th>コマンド</th></tr></thead>
-            <tbody>
-              <tr>
-                <td>変更の保存</td>
-                <td><code>git add -A</code> → <code>git commit -m "feat: 〇〇の実装"</code></td>
-              </tr>
-              <tr>
-                <td>サーバーへ送信</td>
-                <td><code>git push</code></td>
-              </tr>
-              <tr>
-                <td>最新情報の取得</td>
-                <td><code>git pull</code></td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- ── 注意点 ── -->
+      <section class="section fade-in" id="notes">
+        <div class="section-header">
+          <div class="section-num alt">注</div>
+          <h2 class="section-title">注意点</h2>
         </div>
+        <ul>
+          <li><code>.rbxl</code> や <code>.rbxm</code> などのバイナリファイルは Git に含めない</li>
+          <li><code>src/</code> 以下のコードが開発の中心。Studio 側でスクリプトを直接編集しない</li>
+          <li>Rojo のマッピング設定（<code>default.project.json</code>）を変更した場合はチームへの共有が必須</li>
+          <li>GitHub Actions の設定ファイル（<code>.github/workflows/</code>）は削除しない</li>
+          <li>テストコードは <code>src/tests/</code> に配置する</li>
+          <li>Rojo プラグインと CI のバージョンは揃えること</li>
+        </ul>
       </section>
 
     </div><!-- /content -->
@@ -1074,93 +1277,55 @@
   </main>
 </div>
 
-<!-- Back to top -->
 <button id="back-top" aria-label="トップへ戻る">↑</button>
 
 <script>
-  // ── Sidebar toggle (mobile) ──
+  // Sidebar toggle (mobile)
   const sidebar = document.getElementById('sidebar');
   const overlay = document.getElementById('overlay');
   const menuToggle = document.getElementById('menu-toggle');
-
-  menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    overlay.classList.toggle('show');
-  });
-  overlay.addEventListener('click', () => {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('show');
-  });
-
-  // Close sidebar on nav click (mobile)
+  menuToggle.addEventListener('click', () => { sidebar.classList.toggle('open'); overlay.classList.toggle('show'); });
+  overlay.addEventListener('click', () => { sidebar.classList.remove('open'); overlay.classList.remove('show'); });
   sidebar.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      if (window.innerWidth <= 900) {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('show');
-      }
-    });
+    a.addEventListener('click', () => { if (window.innerWidth <= 900) { sidebar.classList.remove('open'); overlay.classList.remove('show'); } });
   });
 
-  // ── Scroll progress bar ──
+  // Scroll progress
   const scrollBar = document.getElementById('scroll-progress');
-  function updateScroll() {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = max > 0 ? window.scrollY / max : 0;
-    scrollBar.style.transform = `scaleX(${pct})`;
-  }
 
-  // ── Active nav highlight ──
-  const sections = document.querySelectorAll('section[id], h3[id]');
+  // Active nav highlight
+  const sections = document.querySelectorAll('section[id], h3[id], h4[id]');
   const navLinks = document.querySelectorAll('aside a');
   function updateNav() {
     let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
   }
 
-  // ── Back to top ──
+  // Back to top
   const backTop = document.getElementById('back-top');
-  function updateBackTop() {
-    backTop.classList.toggle('visible', window.scrollY > 400);
-  }
   backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
   window.addEventListener('scroll', () => {
-    updateScroll();
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    scrollBar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+    backTop.classList.toggle('visible', window.scrollY > 400);
     updateNav();
-    updateBackTop();
   }, { passive: true });
 
-  // ── Fade-in on scroll ──
+  // Fade-in
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        // Animate progress bars inside the element
-        e.target.querySelectorAll('.progress-fill').forEach(bar => {
-          bar.style.width = bar.dataset.width + '%';
-        });
-      }
-    });
-  }, { threshold: 0.1 });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.07 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // ── Copy button ──
+  // Copy button
   function copyCode(btn) {
     const pre = btn.closest('.code-block').querySelector('pre');
-    const text = pre.innerText;
-    navigator.clipboard.writeText(text).then(() => {
+    navigator.clipboard.writeText(pre.innerText).then(() => {
       btn.textContent = '✓ コピー済み';
       btn.classList.add('copied');
-      setTimeout(() => {
-        btn.textContent = 'コピー';
-        btn.classList.remove('copied');
-      }, 2000);
+      setTimeout(() => { btn.textContent = 'コピー'; btn.classList.remove('copied'); }, 2000);
     });
   }
 </script>
